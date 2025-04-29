@@ -33,7 +33,7 @@ const buttonMultiply = document.getElementById("*");
 buttonMultiply.addEventListener("click", function() { operatorPress("*"); });
 const buttonDivide = document.getElementById("/");
 buttonDivide.addEventListener("click", function() { operatorPress("/"); });
-const buttonEquals = document.getElementById("=");
+const buttonEquals = document.getElementById("solve");
 buttonEquals.addEventListener("click", solve);
 
 function clearDisplay() {
@@ -59,9 +59,9 @@ function numPress(num){
         inputJoinSwitch();
     }
     if(joinReady){
-        console.log("num is " + num + ". currentNum is " + currentNum);
+        //console.log("num is " + num + ". currentNum is " + currentNum);
         num = currentNum.toString() + num.toString();
-        console.log("Combined, num is " + num);
+        //console.log("Combined, num is " + num);
         updateDisplay(num);
     }  
 }
@@ -74,7 +74,7 @@ function operatorPress(operator) {
         return;
     }
     if(joinReady){
-        console.log("operator is " + operator + ". currentNum is " + currentNum);
+        //console.log("operator is " + operator + ". currentNum is " + currentNum);
         operator = currentNum.toString() + " " + operator.toString() + " ";
         updateDisplay(operator);
     }  
@@ -85,7 +85,7 @@ function solve() {
     currentNum = currentNum.toString().trim();
     let numArray = currentNum.split(" ");
     for(let i = 0; i < numArray.length; i++) {
-        console.log("numArray[" + i + "] is " + numArray[i]);
+        //console.log("numArray[" + i + "] is " + numArray[i]);
     }
     switch(numArray[1]){
         case "+":
@@ -115,5 +115,3 @@ function updateDisplay(num) {
    let element = document.getElementById("lcd");
    element.innerHTML = num;
 }
-
-export default { clearDisplay, updateDisplay };
