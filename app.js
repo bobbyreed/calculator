@@ -35,6 +35,8 @@ const buttonDivide = document.getElementById("/");
 buttonDivide.addEventListener("click", function() { operatorPress("/"); });
 const buttonEquals = document.getElementById("solve");
 buttonEquals.addEventListener("click", solve);
+const buttonDecimal = document.getElementById("decimal");
+buttonDecimal.addEventListener("click", function() { numPress("."); });
 
 function clearDisplay() {
     updateDisplay("");

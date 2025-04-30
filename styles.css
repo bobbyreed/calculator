@@ -7,7 +7,7 @@
     --crt-green: rgb(112, 159, 115);
     --crt-blue: rgb(40, 129, 206);
  }
-
+/*CRT effect from: https://codepen.io/thisanimus/pen/OJpaqWz */
  /* Global */
 html {
     font-size: 1.5rem;
