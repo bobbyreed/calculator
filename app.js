@@ -87,6 +87,10 @@ function solve() {
     for(let i = 0; i < numArray.length; i++) {
         //console.log("numArray[" + i + "] is " + numArray[i]);
     }
+
+    if(numArray.length !== 3) {
+        return updateDisplay("Error: Invalid input. I'm a simple calculator and can only handle one operation at a time.");
+    }
     switch(numArray[1]){
         case "+":
             var solution = parseFloat(numArray[0]) + parseFloat(numArray[2]);
