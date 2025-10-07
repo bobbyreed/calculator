@@ -39,9 +39,6 @@ buttonDecimal.addEventListener("click", function() { numPress("."); });
 const buttonEquals = document.getElementById("solve");
 buttonEquals.addEventListener("click", solve);
 
-const buttonRolls = document.getElementById("roll");
-buttonEquals.addEventListener("click", roll);
-
 function clearDisplay() {
     updateDisplay("");
     inputJoinSwitch();
@@ -121,10 +118,6 @@ function solve() {
     }
     console.log("Solution is " + solution);
     updateDisplay(solution);
-}
-
-function roll(){
-    updateDisplay(Math.random());
 }
 
 function updateDisplay(num) {
