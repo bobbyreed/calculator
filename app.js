@@ -33,10 +33,14 @@ const buttonMultiply = document.getElementById("*");
 buttonMultiply.addEventListener("click", function() { operatorPress("*"); });
 const buttonDivide = document.getElementById("/");
 buttonDivide.addEventListener("click", function() { operatorPress("/"); });
-const buttonEquals = document.getElementById("solve");
-buttonEquals.addEventListener("click", solve);
 const buttonDecimal = document.getElementById("decimal");
 buttonDecimal.addEventListener("click", function() { numPress("."); });
+
+const buttonEquals = document.getElementById("solve");
+buttonEquals.addEventListener("click", solve);
+
+const buttonRolls = document.getElementById("rikks");
+buttonEquals.addEventListener("click", roll);
 
 function clearDisplay() {
     updateDisplay("");
@@ -115,6 +119,10 @@ function solve() {
             return;
     }
     updateDisplay(solution);
+}
+
+function roll(){
+    updateDisplay(Math.random());
 }
 
 function updateDisplay(num) {
