@@ -39,7 +39,7 @@ buttonDecimal.addEventListener("click", function() { numPress("."); });
 const buttonEquals = document.getElementById("solve");
 buttonEquals.addEventListener("click", solve);
 
-const buttonRolls = document.getElementById("rikks");
+const buttonRolls = document.getElementById("roll");
 buttonEquals.addEventListener("click", roll);
 
 function clearDisplay() {
