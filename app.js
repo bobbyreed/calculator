@@ -91,7 +91,7 @@ function solve() {
     currentNum = currentNum.toString().trim();
     let numArray = currentNum.split(" ");
     for(let i = 0; i < numArray.length; i++) {
-        //console.log("numArray[" + i + "] is " + numArray[i]);
+        console.log("numArray[" + i + "] is " + numArray[i]);
     }
 
     if(numArray.length !== 3) {
@@ -99,6 +99,7 @@ function solve() {
     }
     switch(numArray[1]){
         case "+":
+            console.log("Adding " + numArray[0] + " to "  + numArray[2] )
             var solution = parseFloat(numArray[0]) + parseFloat(numArray[2]);
             break;
         case "-":
@@ -118,6 +119,7 @@ function solve() {
             alert("Invalid operator.");
             return;
     }
+    console.log("Solution is " + solution);
     updateDisplay(solution);
 }
 
